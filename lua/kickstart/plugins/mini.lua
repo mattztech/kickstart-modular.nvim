@@ -17,6 +17,18 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
+      -- Allow auto comment via gc, gcc etc
+      require('mini.comment').setup()
+
+      -- Move lines around, using alt (meta) + hjkl
+      require('mini.move').setup()
+
+      -- Manipulate text, most useful is gm to duplicate (while in visual mode)
+      require('mini.operators').setup()
+
+      -- Split arguments to new lines via gS
+      require('mini.splitjoin').setup()
+
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
