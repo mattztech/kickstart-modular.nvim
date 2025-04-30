@@ -9,6 +9,18 @@
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
+
+-- Set highlight colour to match intellij
+-- vim.api.nvim_create_autocmd({ 'ColorScheme', 'VimEnter' }, {
+--   group = vim.api.nvim_create_augroup('Color', {}),
+--   pattern = '*',
+--   callback = function()
+--     vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = '#c3d9a5' })
+--     vim.api.nvim_set_hl(0, 'LspReferenceWrite', { bg = '#c3d9a5' })
+--     vim.api.nvim_set_hl(0, 'LspReferenceText', { bg = '#c3d9a5' })
+--   end,
+-- })
+
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
@@ -35,7 +47,9 @@ require('lazy').setup({
 
   require 'kickstart/plugins/blink-cmp',
 
-  require 'kickstart/plugins/tokyonight',
+  require 'kickstart/plugins/catpuccin',
+  -- require 'kickstart/plugins/tokyonight',
+  -- require 'kickstart/plugins/darcula-dark',
 
   require 'kickstart/plugins/todo-comments',
 
@@ -52,7 +66,7 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
