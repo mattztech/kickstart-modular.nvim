@@ -278,7 +278,44 @@ return {
             }
 
             require('lspconfig').jdtls.setup {
-              -- Your custom nvim-java configuration goes here
+              settings = {
+                java = {
+                  format = {
+                    enabled = true,
+                    -- settings = {
+                    --   url = ''
+                    --   profile = 'GoogleStyle'
+                    -- }
+                  },
+                  maven = {
+                    downloadSources = true,
+                  },
+                  signatureHelp = {
+                    enabled = true,
+                  },
+                  saveActions = {
+                    organizeImports = true,
+                  },
+                  inlayHints = {
+                    parameterNames = {
+                      enabled = 'all',
+                    },
+                  },
+                  referencesCodeLens = {
+                    enabled = true,
+                  },
+                  home = '/Users/mattblackford/.sdkman/candidates/java/current',
+                  configuration = {
+                    runtimes = {
+                      {
+                        name = 'JavaSE-21',
+                        path = '/Users/mattblackford/.sdkman/candidates/java/current/bin/java',
+                        default = true,
+                      },
+                    },
+                  },
+                },
+              },
             }
           end,
         },
