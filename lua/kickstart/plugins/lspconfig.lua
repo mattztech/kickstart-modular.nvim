@@ -282,27 +282,10 @@ return {
                 java = {
                   format = {
                     enabled = true,
-                    -- settings = {
-                    --   url = ''
-                    --   profile = 'GoogleStyle'
-                    -- }
-                  },
-                  maven = {
-                    downloadSources = true,
-                  },
-                  signatureHelp = {
-                    enabled = true,
-                  },
-                  saveActions = {
-                    organizeImports = true,
-                  },
-                  inlayHints = {
-                    parameterNames = {
-                      enabled = 'all',
+                    settings = {
+                      url = '/Users/mattblackford/GoogleStyle_120_Eclipse.xml',
+                      profile = 'GoogleStyle',
                     },
-                  },
-                  referencesCodeLens = {
-                    enabled = true,
                   },
                   home = '/Users/mattblackford/.sdkman/candidates/java/current',
                   configuration = {
