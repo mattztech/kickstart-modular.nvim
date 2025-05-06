@@ -22,7 +22,6 @@ return {
       { 'williamboman/mason.nvim', opts = {} },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-      'nvim-java/nvim-java',
 
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
@@ -214,6 +213,7 @@ return {
         terraformls = {},
         pyright = {},
         yamlls = {},
+        jsonls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -270,36 +270,6 @@ return {
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
-          end,
-
-          jdtls = function()
-            require('java').setup {
-              -- Your custom jdtls settings goes here
-            }
-
-            require('lspconfig').jdtls.setup {
-              settings = {
-                java = {
-                  format = {
-                    enabled = true,
-                    settings = {
-                      url = '/Users/mattblackford/GoogleStyle_120_Eclipse.xml',
-                      profile = 'GoogleStyle',
-                    },
-                  },
-                  home = '/Users/mattblackford/.sdkman/candidates/java/current',
-                  configuration = {
-                    runtimes = {
-                      {
-                        name = 'JavaSE-21',
-                        path = '/Users/mattblackford/.sdkman/candidates/java/current/bin/java',
-                        default = true,
-                      },
-                    },
-                  },
-                },
-              },
-            }
           end,
         },
       }

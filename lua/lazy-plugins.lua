@@ -39,6 +39,8 @@ require('lazy').setup({
 
   require 'kickstart/plugins/which-key',
 
+  require 'kickstart/plugins/neoconf',
+
   require 'kickstart/plugins/telescope',
 
   require 'kickstart/plugins/lspconfig',
