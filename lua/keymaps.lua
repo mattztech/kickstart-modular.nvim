@@ -51,4 +51,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Map Enter to insert new line below, Shift+Enter for above
+vim.keymap.set('n', '<Enter>', 'o<ESC>', { desc = 'Add blank line below' })
+vim.keymap.set('n', '<S-Enter>', 'O<ESC>', { desc = 'Add blank line above' })
+
 -- vim: ts=2 sts=2 sw=2 et

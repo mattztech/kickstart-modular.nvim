@@ -31,6 +31,10 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        terraform = { 'terraform_fmt' },
+        hcl = { 'terraform_fmt' },
+        go = { 'golangci-lint', 'golines' },
+        java = { 'google-java-format' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
