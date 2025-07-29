@@ -33,7 +33,7 @@ return {
         lua = { 'stylua' },
         terraform = { 'terraform_fmt' },
         hcl = { 'terraform_fmt' },
-        go = { 'gofmt' },
+        go = { 'gofmt', 'goimports' },
         java = { 'google-java-format' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
